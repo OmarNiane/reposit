@@ -1,0 +1,407 @@
+
+/* Style général du menu */
+.navbar {
+    background-color: #000; /* Fond noir */
+    padding: 15px 0;
+}
+
+.navbar .navbar-brand img {
+    max-width: 100px; /* Taille du logo */
+    height: auto;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #fff; /* Texte blanc */
+    font-size: 1.1rem;
+    margin-left: 15px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #87CEEB; /* Texte bleu clair au survol */
+}
+
+.navbar-toggler {
+    border: none; /* Enlever la bordure du bouton mobile */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff; /* Icône du menu mobile en blanc */
+}
+
+/* Ajustement pour le responsive */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-link {
+        margin: 10px 0; /* Espace entre les liens sur mobile */
+    }
+}
+
+
+/* Style pour la section Hero */
+#hero {
+    background-color: #f9f9f9; /* Couleur de fond légèrement grise */
+}
+
+#hero h1 {
+    font-size: 3rem; /* Taille du titre */
+    font-weight: bold;
+    color: #333;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+#hero .btn-dark {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#hero .btn-dark:hover {
+    background-color: #444;
+}
+
+/* Pour les petits écrans (tablette et mobile) */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2rem; /* Réduction de la taille du titre */
+    }
+    
+    #hero p {
+        font-size: 1rem; /* Réduction de la taille du texte */
+    }
+
+    /* Ajustement de l'image pour qu'elle s'affiche sous le texte */
+    #hero .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Style pour la section À propos */
+#about {
+    background-color: #fff; /* Couleur de fond blanche */
+    padding: 50px 0; /* Espacement vertical */
+}
+
+#about h2 {
+    font-size: 2.5rem; /* Taille du titre */
+    color: #333;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px; /* Espace entre les paragraphes */
+}
+
+/* Pour les petits écrans (tablette et mobile) */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2rem; /* Réduction de la taille du titre */
+    }
+    
+    #about p {
+        font-size: 1rem; /* Réduction de la taille du texte */
+    }
+
+    /* Ajustement de l'image pour qu'elle s'affiche sous le texte */
+    #about .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Section Compétences */
+.skills {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Couleur de fond douce */
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 40px; /* Espace sous le titre */
+    font-size: 2.5em;
+    color: #333; /* Couleur du texte */
+}
+
+.skills .row {
+    display: flex;
+    justify-content: center; /* Centre les compétences horizontalement */
+    flex-wrap: wrap; /* Permet le retour à la ligne pour les colonnes */
+}
+
+.skills .col-md-6 {
+    margin-bottom: 20px; /* Espace entre les compétences */
+    flex: 1 0 45%; /* Ajuste la largeur des colonnes */
+    max-width: 45%; /* Limite la largeur maximale */
+}
+
+.skills h4 {
+    font-size: 1.5em;
+    color: #555; /* Couleur des titres de compétence */
+    margin-bottom: 10px; /* Espace sous chaque titre */
+}
+
+.progress {
+    background-color: #e0e0e0; /* Couleur de fond de la barre */
+    border-radius: 20px; /* Coins arrondis */
+    height: 20px; /* Hauteur de la barre */
+}
+
+.progress-bar {
+    background-color: #4caf50; /* Couleur de la barre de progression */
+    height: 100%; /* Hauteur complète de la barre */
+    border-radius: 20px; /* Coins arrondis */
+    text-align: center; /* Centre le texte dans la barre */
+    color: white; /* Couleur du texte */
+    line-height: 20px; /* Aligne le texte verticalement */
+}
+
+
+/* Section Projets */
+.projects {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.projects .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projects .project-card {
+    margin: 15px;
+    flex: 1 0 300px;
+    max-width: 300px;
+    position: relative; /* Position relative pour le contenu superposé */
+}
+
+.projects .project-image {
+    position: relative; /* Position relative pour le texte superposé */
+}
+
+.projects .project-image img {
+    width: 100%; /* Image responsive */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+.projects .project-description {
+    position: absolute; /* Position absolue pour le texte */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; /* Utilise Flexbox pour centrer le contenu */
+    flex-direction: column; /* Colonne pour le contenu */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    color: white; /* Couleur du texte */
+    opacity: 0; /* Caché par défaut */
+    transition: opacity 0.3s; /* Transition douce */
+}
+
+.projects .project-card:hover .project-description {
+    opacity: 1; /* Montre le texte au survol */
+}
+
+.projects .project-description h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.projects .project-description p {
+    margin-bottom: 15px;
+}
+
+.projects .project-description a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #4caf50;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.projects .project-description a:hover {
+    background-color: #45a049;
+}
+
+
+.temoignages-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    margin: 0 0 10px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.contact-section {
+    padding: 50px 0;
+    background-color: #f0f0f0;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-logo img {
+    max-width: 150px; /* Ajustez la taille du logo ici */
+}
+
+.footer h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer-social a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #222; /* Optionnel : Une couleur légèrement différente pour le copyright */
+    color: #fff;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+
+.image-container {
+    position: relative;
+    overflow: hidden; /* Assure que l'image de survol ne dépasse pas le conteneur */
+}
+
+.card-img-top {
+    transition: opacity 0.3s ease; /* Transition pour l'image principale */
+}
+
+.hover-image {
+    position: absolute; /* Positionnement absolu pour superposer l'image de survol */
+    top: 0;
+    left: 0;
+    width: 100%; /* Prendre toute la largeur du conteneur */
+    height: auto; /* Conserver le ratio de l'image */
+    opacity: 0; /* Cacher l'image de survol par défaut */
+    transition: opacity 0.3s ease; /* Transition pour l'image de survol */
+}
+
+.image-container:hover .card-img-top {
+    opacity: 0; /* Cacher l'image principale au survol */
+}
+
+.image-container:hover .hover-image {
+    opacity: 1; /* Afficher l'image de survol au survol */
+}
